@@ -6,7 +6,14 @@ import '../src/Reusable/Footer.css'
 import  OwlCarousel  from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay';
+import Slider from './Slider';
 function App() {
   const options = {
     responsive: {
@@ -32,6 +39,7 @@ function App() {
     nav: false,
     dots: true
   }
+
   return (
     <>
       <div className="container-fluid banner">
@@ -632,16 +640,14 @@ function App() {
       </section>
       {/* sliding review */}
       <section className="slider p4 mt-4 mb-4">
-        <OwlCarousel className='owl-theme section' loop margin={20} autoplay {...options}>
+        {/* <OwlCarousel className='owl-theme section' loop margin={20} autoplay {...options}>
 
-          {/* 1 */}
           <div className="review item">
             <div className="review-img">
               <img src="static\images\r1.png" alt="" />
             </div>
           </div>
 
-          {/* 2 */}
           <div className="review item">
             <div className="review-img">
               <img src="static\images\r2.png" alt="" />
@@ -649,7 +655,6 @@ function App() {
           </div>
 
 
-          {/* 3 */}
           <div className="review item">
             <div className="review-img">
               <img src="static\images\r3.png" alt="" className="trust" />
@@ -673,7 +678,33 @@ function App() {
               <img src="static\images\r6.png" alt="" className="trust" />
             </div>
           </div>
-        </OwlCarousel>
+        </OwlCarousel> */}
+
+{/* <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={50}
+      slidesPerView={3}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+    >
+      <SwiperSlide>Slide 1</SwiperSlide>
+      <SwiperSlide>Slide 2</SwiperSlide>
+      <SwiperSlide>Slide 3</SwiperSlide>
+      <SwiperSlide>Slide 4</SwiperSlide>
+      <SwiperSlide>Slide 1</SwiperSlide>
+      <SwiperSlide>Slide 2</SwiperSlide>
+      <SwiperSlide>Slide 3</SwiperSlide>
+      <SwiperSlide>Slide 4</SwiperSlide>
+    </Swiper> */}
+
+<Slider/>
+
+
+
   <div className="dr">
     <button className='btn mt-4 fs2' style={{backgroundColor:'yellow' , width:'150px', fontWeight:'bolder'}}>Appointment</button>
   </div>
