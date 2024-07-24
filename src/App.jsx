@@ -3,42 +3,9 @@ import Form from 'react-bootstrap/Form';
 import React from "react"
 import './App.scss'
 import '../src/Reusable/Footer.css'
-import  OwlCarousel  from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import 'swiper/css/autoplay';
 import Slider from './Slider';
+
 function App() {
-  const options = {
-    responsive: {
-      0: {
-        items: 1,
-      },
-      400: {
-        items: 1,
-      },
-      600: {
-        items: 1,
-      },
-      700: {
-        items: 2,
-      },
-      800: {
-        items: 3,
-      },
-      1000: {
-        items: 4,
-      }
-    },
-    nav: false,
-    dots: true
-  }
 
   return (
     <>
@@ -640,67 +607,7 @@ function App() {
       </section>
       {/* sliding review */}
       <section className="slider p4 mt-4 mb-4">
-        {/* <OwlCarousel className='owl-theme section' loop margin={20} autoplay {...options}>
-
-          <div className="review item">
-            <div className="review-img">
-              <img src="static\images\r1.png" alt="" />
-            </div>
-          </div>
-
-          <div className="review item">
-            <div className="review-img">
-              <img src="static\images\r2.png" alt="" />
-            </div>
-          </div>
-
-
-          <div className="review item">
-            <div className="review-img">
-              <img src="static\images\r3.png" alt="" className="trust" />
-            </div>
-          </div>
-
-          <div className="review item">
-            <div className="review-img">
-              <img src="static\images\r4.png" alt="" className="trust" />
-            </div>
-          </div>
-
-          <div className="review item">
-            <div className="review-img">
-              <img src="static\images\r5.png" alt="" className="trust" />
-            </div>
-          </div>
-
-          <div className="review item">
-            <div className="review-img">
-              <img src="static\images\r6.png" alt="" className="trust" />
-            </div>
-          </div>
-        </OwlCarousel> */}
-
-{/* <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={3}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-    >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-    </Swiper> */}
-
+       
 <Slider/>
 
 
